@@ -1,7 +1,7 @@
 name: dynamic_grid_view
 description: Flutter library to use GridView inside SingleChildScrollView without fixed height (i.e., using dynamic height based on elements).
 version: 0.0.1
-homepage: https://github.com/sehgalrishabh
+homepage: https://github.com/sehgalrishabh/Dynamic-Grid-View
 
 environment:
   sdk: ">=2.19.6 <3.0.0"

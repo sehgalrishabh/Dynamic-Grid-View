@@ -11,12 +11,15 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Flutter library to use GridView inside SingleChildScrollView without fixed height (i.e., using dynamic height based on elements).
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+How to use GridView inside SingleChildScrollView ?
+
+Sometimes we need to use GridView inside a SingleChildScrollView, for instance when working on an ecommerce app. Now the problem is you can’t create a GridView inside SingleChildScrollView because both will try to take as much space available which here makes height unbounded/infinite.
+
+DynamicGridView provides solution to the problem.
 
 ## Getting started
 
@@ -25,15 +28,23 @@ start using the package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+```dart
+  DynamicGridView(
+              width: width,
+              horizontalPadding: 16,
+              dataSet: items,
+              child: (context, index) {return yourGridElement};
+              ),
+```
 
 ```dart
-const like = 'sample';
+— count is the total number of items or itemCount.
+— itemsPerRow is the number of items in a row or crossAxisCount.
+— ratio is the childAspectRatio attribute of GridView that usually is used to set the size of an item inside the grid. ratio is calculated as width/height.
+— horizontalPadding is the horizontal padding given to GridView(in the case of the vertical list)
+- child is the element need to return from GridView
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+To file an issue or to give your suggestions please reach out to https://github.com/sehgalrishabh/Dynamic-Grid-View.
